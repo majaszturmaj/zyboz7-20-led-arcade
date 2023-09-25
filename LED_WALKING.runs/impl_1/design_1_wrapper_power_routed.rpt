@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-| Date             : Sun Sep 24 11:23:48 2023
+| Date             : Mon Sep 25 12:18:57 2023
 | Host             : 15ach6 running 64-bit Ubuntu 22.04.3 LTS
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -53,15 +53,15 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |    <0.001 |        6 |       --- |             --- |
-| Slice Logic              |    <0.001 |      410 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |       72 |     53200 |            0.14 |
-|   CARRY4                 |    <0.001 |       17 |     13300 |            0.13 |
-|   Register               |    <0.001 |      119 |    106400 |            0.11 |
-|   Others                 |     0.000 |      152 |       --- |             --- |
+| Slice Logic              |    <0.001 |      480 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |       91 |     53200 |            0.17 |
+|   CARRY4                 |    <0.001 |       22 |     13300 |            0.17 |
+|   Register               |    <0.001 |      156 |    106400 |            0.15 |
+|   Others                 |     0.000 |      155 |       --- |             --- |
 |   LUT as Distributed RAM |     0.000 |        8 |     17400 |            0.05 |
-| Signals                  |    <0.001 |      173 |       --- |             --- |
+| Signals                  |    <0.001 |      231 |       --- |             --- |
 | PLL                      |     0.099 |        1 |         4 |           25.00 |
-| I/O                      |    <0.001 |       15 |       125 |           12.00 |
+| I/O                      |    <0.001 |       17 |       125 |           13.60 |
 | PS7                      |     1.399 |        1 |       --- |             --- |
 | Static Power             |     0.143 |          |           |                 |
 | Total                    |     1.643 |          |           |                 |

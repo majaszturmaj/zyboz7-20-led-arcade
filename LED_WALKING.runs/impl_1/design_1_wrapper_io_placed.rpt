@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-| Date                      : Sun Sep 24 11:23:37 2023
+| Date                      : Mon Sep 25 12:18:46 2023
 | Host                      : 15ach6 running 64-bit Ubuntu 22.04.3 LTS
 | Command                   : report_io -file design_1_wrapper_io_placed.rpt
 | Design                    : design_1_wrapper
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|           145 |
+|           147 |
 +---------------+
 
 
@@ -169,7 +169,7 @@ Table of Contents
 | G12        |                   |            | GND                     | GND         |                    |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | G13        |                   |            | VCCINT                  | VCCINT      |                    |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | G14        | led[2]            | High Range | IO_0_35                 | OUTPUT      | LVCMOS33           |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
-| G15        |                   | High Range | IO_L19N_T3_VREF_35      | User IO     |                    |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| G15        | faster            | High Range | IO_L19N_T3_VREF_35      | INPUT       | LVCMOS33           |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | G16        |                   |            | GND                     | GND         |                    |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | G17        |                   | High Range | IO_L16P_T2_35           | User IO     |                    |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | G18        |                   | High Range | IO_L16N_T2_35           | User IO     |                    |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
@@ -309,7 +309,7 @@ Table of Contents
 | P12        |                   |            | VCCINT                  | VCCINT      |                    |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | P13        |                   |            | GND                     | GND         |                    |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | P14        |                   | High Range | IO_L6P_T0_34            | User IO     |                    |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| P15        |                   | High Range | IO_L24P_T3_34           | User IO     |                    |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| P15        | slower            | High Range | IO_L24P_T3_34           | INPUT       | LVCMOS33           |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | P16        | button1           | High Range | IO_L24N_T3_34           | INPUT       | LVCMOS33           |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | P17        |                   |            | GND                     | GND         |                    |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | P18        |                   | High Range | IO_L23N_T3_34           | User IO     |                    |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |

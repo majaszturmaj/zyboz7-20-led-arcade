@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../LED_WALKING.srcs/sources_1/bd/design_1/ipshared/8b3d" --include "../../../../LED_WALKING.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../LED_WALKING.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" --include "/home/maja/Digital/Vivado/2020.1/data/xilinx_vip/include" \
+"../../../../LED_WALKING.srcs/sources_1/imports/src/led_walk.v" \
+"../../../../LED_WALKING.srcs/sim_1/new/tb_led_walk.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

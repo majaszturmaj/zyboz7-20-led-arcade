@@ -55,19 +55,25 @@
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_led_walk_0_2 (
-  clk,
+  CLK,
+  slower,
+  faster,
   active,
   led
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 10000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
-input wire clk;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK, FREQ_HZ 10000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK CLK" *)
+input wire CLK;
+input wire slower;
+input wire faster;
 input wire active;
 output wire [3 : 0] led;
 
   led_walk inst (
-    .clk(clk),
+    .CLK(CLK),
+    .slower(slower),
+    .faster(faster),
     .active(active),
     .led(led)
   );

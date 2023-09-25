@@ -100,6 +100,7 @@ read_verilog -library xil_defaultlib {
   /home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/imports/ARCADE/mul_cheat_detect.v
   /home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/imports/ARCADE/check.v
   /home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/imports/ARCADE/messenger.v
+  {/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/imports/Verilog Hajduk/debouncer.v}
   /home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
 }
 add_files /home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/design_1.bd

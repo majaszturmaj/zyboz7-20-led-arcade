@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x9471EC603A69E255",
+      "boundary_crc": "0x8EF04DD5A52851D0",
       "device": "xc7z020clg400-1",
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
@@ -11,13 +11,17 @@
     },
     "design_tree": {
       "clk_wiz_0": "",
-      "led_walk_0": "",
       "SERIAL_TX_FIFO_0": "",
       "SERIAL_CLOCK_0": "",
       "messenger_0": "",
       "processing_system7_0": "",
       "arcade_check_0": "",
-      "mul_cheat_detect_0": ""
+      "mul_cheat_detect_0": "",
+      "debouncer_0": "",
+      "xlconcat_0": "",
+      "xlslice_0": "",
+      "xlslice_1": "",
+      "led_walk_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -155,6 +159,12 @@
             "value": "0.000"
           }
         }
+      },
+      "slower": {
+        "direction": "I"
+      },
+      "faster": {
+        "direction": "I"
       }
     },
     "components": {
@@ -178,19 +188,28 @@
             "value": "BUFG"
           },
           "CLKOUT2_JITTER": {
-            "value": "288.707"
+            "value": "317.841"
           },
           "CLKOUT2_PHASE_ERROR": {
-            "value": "258.220"
+            "value": "249.865"
           },
           "CLKOUT2_REQUESTED_OUT_FREQ": {
-            "value": "50.000"
+            "value": "25.000"
           },
           "CLKOUT2_USED": {
             "value": "false"
           },
           "CLKOUT3_DRIVES": {
             "value": "BUFG"
+          },
+          "CLKOUT3_JITTER": {
+            "value": "237.312"
+          },
+          "CLKOUT3_PHASE_ERROR": {
+            "value": "249.865"
+          },
+          "CLKOUT3_USED": {
+            "value": "false"
           },
           "CLKOUT4_DRIVES": {
             "value": "BUFG"
@@ -211,7 +230,10 @@
             "value": "clk_out_10MHz"
           },
           "CLK_OUT2_PORT": {
-            "value": "clk_out_50MHz"
+            "value": "clk_out_25MHz"
+          },
+          "CLK_OUT3_PORT": {
+            "value": "clk_out_100MHz"
           },
           "FEEDBACK_SOURCE": {
             "value": "FDBK_AUTO"
@@ -229,6 +251,9 @@
             "value": "85"
           },
           "MMCM_CLKOUT1_DIVIDE": {
+            "value": "1"
+          },
+          "MMCM_CLKOUT2_DIVIDE": {
             "value": "1"
           },
           "MMCM_COMPENSATION": {
@@ -251,43 +276,6 @@
           },
           "USE_RESET": {
             "value": "false"
-          }
-        }
-      },
-      "led_walk_0": {
-        "vlnv": "xilinx.com:module_ref:led_walk:1.0",
-        "xci_name": "design_1_led_walk_0_2",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "led_walk",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
-              },
-              "FREQ_HZ": {
-                "value": "10000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "active": {
-            "direction": "I"
-          },
-          "led": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
           }
         }
       },
@@ -1501,6 +1489,122 @@
             "direction": "O"
           }
         }
+      },
+      "debouncer_0": {
+        "vlnv": "xilinx.com:module_ref:debouncer:1.0",
+        "xci_name": "design_1_debouncer_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "debouncer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "10000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "PB": {
+            "direction": "I",
+            "left": "3",
+            "right": "0",
+            "parameters": {
+              "PortWidth": {
+                "value": "2",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "BUTTONS": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "xlconcat_0": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "xci_name": "design_1_xlconcat_0_0"
+      },
+      "xlslice_0": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "design_1_xlslice_0_1",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "1"
+          },
+          "DIN_TO": {
+            "value": "1"
+          },
+          "DIN_WIDTH": {
+            "value": "4"
+          }
+        }
+      },
+      "xlslice_1": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "design_1_xlslice_1_0",
+        "parameters": {
+          "DIN_WIDTH": {
+            "value": "4"
+          }
+        }
+      },
+      "led_walk_0": {
+        "vlnv": "xilinx.com:module_ref:led_walk:1.0",
+        "xci_name": "design_1_led_walk_0_2",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "led_walk",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "CLK": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "10000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "slower": {
+            "direction": "I"
+          },
+          "faster": {
+            "direction": "I"
+          },
+          "active": {
+            "direction": "I"
+          },
+          "led": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -1591,11 +1695,12 @@
       "clk_wiz_0_clk_out_10MHz": {
         "ports": [
           "clk_wiz_0/clk_out_10MHz",
-          "led_walk_0/clk",
           "SERIAL_TX_FIFO_0/CLK_WR",
           "messenger_0/clk",
           "arcade_check_0/clk",
-          "mul_cheat_detect_0/clk"
+          "mul_cheat_detect_0/clk",
+          "debouncer_0/clk",
+          "led_walk_0/CLK"
         ]
       },
       "SERIAL_CLOCK_0_CLK_TX": {
@@ -1639,6 +1744,43 @@
         "ports": [
           "sys_clock",
           "clk_wiz_0/clk_in1"
+        ]
+      },
+      "slower_1": {
+        "ports": [
+          "slower",
+          "xlconcat_0/In0"
+        ]
+      },
+      "faster_1": {
+        "ports": [
+          "faster",
+          "xlconcat_0/In1"
+        ]
+      },
+      "xlconcat_0_dout": {
+        "ports": [
+          "xlconcat_0/dout",
+          "debouncer_0/PB"
+        ]
+      },
+      "debouncer_0_BUTTONS": {
+        "ports": [
+          "debouncer_0/BUTTONS",
+          "xlslice_1/Din",
+          "xlslice_0/Din"
+        ]
+      },
+      "xlslice_1_Dout": {
+        "ports": [
+          "xlslice_1/Dout",
+          "led_walk_0/slower"
+        ]
+      },
+      "xlslice_0_Dout": {
+        "ports": [
+          "xlslice_0/Dout",
+          "led_walk_0/faster"
         ]
       }
     },

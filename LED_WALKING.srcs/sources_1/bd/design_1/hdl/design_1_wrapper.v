@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-//Date        : Sun Sep 24 11:22:35 2023
+//Date        : Mon Sep 25 12:17:43 2023
 //Host        : 15ach6 running 64-bit Ubuntu 22.04.3 LTS
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -39,7 +39,9 @@ module design_1_wrapper
     button1,
     button2,
     button3,
+    faster,
     led,
+    slower,
     sys_clock);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
@@ -70,7 +72,9 @@ module design_1_wrapper
   input button1;
   input button2;
   input button3;
+  input faster;
   output [3:0]led;
+  input slower;
   input sys_clock;
 
   wire [14:0]DDR_addr;
@@ -102,7 +106,9 @@ module design_1_wrapper
   wire button1;
   wire button2;
   wire button3;
+  wire faster;
   wire [3:0]led;
+  wire slower;
   wire sys_clock;
 
   design_1 design_1_i
@@ -135,6 +141,8 @@ module design_1_wrapper
         .button1(button1),
         .button2(button2),
         .button3(button3),
+        .faster(faster),
         .led(led),
+        .slower(slower),
         .sys_clock(sys_clock));
 endmodule

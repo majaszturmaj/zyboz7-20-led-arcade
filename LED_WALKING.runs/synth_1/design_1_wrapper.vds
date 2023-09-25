@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Sun Sep 24 11:22:40 2023
-# Process ID: 28641
+# Start of session at: Mon Sep 25 12:17:48 2023
+# Process ID: 176136
 # Current directory: /home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.runs/synth_1
 # Command line: vivado -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: /home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.runs/synth_1/design_1_wrapper.vds
@@ -40,6 +40,11 @@ WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces 
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/IP/led_walk'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/maja/Digital/projs/VivadoProjs/ip_repos/IP_Cores'.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'CLK' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/IP/led_walk'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/maja/Digital/projs/VivadoProjs/ip_repos/IP_Cores'.
 Command: synth_design -top design_1_wrapper -part xc7z020clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
@@ -47,9 +52,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 28700
+INFO: [Synth 8-7075] Helper process launched with PID 176206
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2247.551 ; gain = 0.000 ; free physical = 17854 ; free virtual = 52789
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2279.574 ; gain = 0.000 ; free physical = 672 ; free virtual = 49939
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:13]
@@ -59,8 +64,8 @@ INFO: [Synth 8-6157] synthesizing module 'SERIAL_CLOCK' [/home/maja/Digital/proj
 	Parameter N bound to: 20 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'SERIAL_CLOCK' (1#1) [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ipshared/e5dd/src/serial_clock.v:19]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_SERIAL_CLOCK_0_0' (2#1) [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_SERIAL_CLOCK_0_0/synth/design_1_SERIAL_CLOCK_0_0.v:58]
-WARNING: [Synth 8-7071] port 'CLK_RX' of module 'design_1_SERIAL_CLOCK_0_0' is unconnected for instance 'SERIAL_CLOCK_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:128]
-WARNING: [Synth 8-7023] instance 'SERIAL_CLOCK_0' of module 'design_1_SERIAL_CLOCK_0_0' has 3 connections declared, but only 2 given [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:128]
+WARNING: [Synth 8-7071] port 'CLK_RX' of module 'design_1_SERIAL_CLOCK_0_0' is unconnected for instance 'SERIAL_CLOCK_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:140]
+WARNING: [Synth 8-7023] instance 'SERIAL_CLOCK_0' of module 'design_1_SERIAL_CLOCK_0_0' has 3 connections declared, but only 2 given [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:140]
 INFO: [Synth 8-6157] synthesizing module 'design_1_SERIAL_TX_FIFO_0_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_SERIAL_TX_FIFO_0_0/synth/design_1_SERIAL_TX_FIFO_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'SERIAL_TX_FIFO' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ipshared/eaf5/src/serial_tx_fifo.v:19]
 	Parameter DEPTH bound to: 5 - type: integer 
@@ -121,21 +126,26 @@ INFO: [Synth 8-6157] synthesizing module 'BUFG' [/home/maja/Digital/Vivado/2020.
 INFO: [Synth 8-6155] done synthesizing module 'BUFG' (10#1) [/home/maja/Digital/Vivado/2020.1/scripts/rt/data/unisim_comp.v:1083]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_0_clk_wiz' (11#1) [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v:68]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_0' (12#1) [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v:70]
+INFO: [Synth 8-6157] synthesizing module 'design_1_debouncer_0_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_debouncer_0_0/synth/design_1_debouncer_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'debouncer' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/imports/Verilog Hajduk/debouncer.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'debouncer' (13#1) [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/imports/Verilog Hajduk/debouncer.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_debouncer_0_0' (14#1) [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_debouncer_0_0/synth/design_1_debouncer_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'design_1_led_walk_0_2' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_led_walk_0_2/synth/design_1_led_walk_0_2.v:58]
 INFO: [Synth 8-6157] synthesizing module 'led_walk' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/imports/src/led_walk.v:3]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/imports/src/led_walk.v:29]
-INFO: [Synth 8-6155] done synthesizing module 'led_walk' (13#1) [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/imports/src/led_walk.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_led_walk_0_2' (14#1) [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_led_walk_0_2/synth/design_1_led_walk_0_2.v:58]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/imports/src/led_walk.v:20]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/imports/src/led_walk.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'led_walk' (15#1) [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/imports/src/led_walk.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_led_walk_0_2' (16#1) [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_led_walk_0_2/synth/design_1_led_walk_0_2.v:58]
 INFO: [Synth 8-6157] synthesizing module 'design_1_messenger_0_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_messenger_0_0/synth/design_1_messenger_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'messenger' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/imports/ARCADE/messenger.v:1]
 INFO: [Synth 8-155] case statement is not full and has no default [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/imports/ARCADE/messenger.v:17]
 INFO: [Synth 8-155] case statement is not full and has no default [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/imports/ARCADE/messenger.v:69]
-INFO: [Synth 8-6155] done synthesizing module 'messenger' (15#1) [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/imports/ARCADE/messenger.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_messenger_0_0' (16#1) [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_messenger_0_0/synth/design_1_messenger_0_0.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'messenger' (17#1) [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/imports/ARCADE/messenger.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_messenger_0_0' (18#1) [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_messenger_0_0/synth/design_1_messenger_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'design_1_mul_cheat_detect_0_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_mul_cheat_detect_0_0/synth/design_1_mul_cheat_detect_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'mul_cheat_detect' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/imports/ARCADE/mul_cheat_detect.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'mul_cheat_detect' (17#1) [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/imports/ARCADE/mul_cheat_detect.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_mul_cheat_detect_0_0' (18#1) [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_mul_cheat_detect_0_0/synth/design_1_mul_cheat_detect_0_0.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'mul_cheat_detect' (19#1) [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/imports/ARCADE/mul_cheat_detect.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_mul_cheat_detect_0_0' (20#1) [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_mul_cheat_detect_0_0/synth/design_1_mul_cheat_detect_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:60]
 INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_system7' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:161]
 	Parameter C_USE_DEFAULT_ACP_USER_VAL bound to: 0 - type: integer 
@@ -195,10 +205,10 @@ INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_sys
 	Parameter C_GP0_EN_MODIFIABLE_TXN bound to: 1 - type: integer 
 	Parameter C_GP1_EN_MODIFIABLE_TXN bound to: 1 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'BIBUF' [/home/maja/Digital/Vivado/2020.1/scripts/rt/data/unisim_comp.v:730]
-INFO: [Synth 8-6155] done synthesizing module 'BIBUF' (19#1) [/home/maja/Digital/Vivado/2020.1/scripts/rt/data/unisim_comp.v:730]
+INFO: [Synth 8-6155] done synthesizing module 'BIBUF' (21#1) [/home/maja/Digital/Vivado/2020.1/scripts/rt/data/unisim_comp.v:730]
 INFO: [Synth 8-6157] synthesizing module 'PS7' [/home/maja/Digital/Vivado/2020.1/scripts/rt/data/unisim_comp.v:62027]
-INFO: [Synth 8-6155] done synthesizing module 'PS7' (20#1) [/home/maja/Digital/Vivado/2020.1/scripts/rt/data/unisim_comp.v:62027]
-INFO: [Synth 8-6155] done synthesizing module 'processing_system7_v5_5_processing_system7' (21#1) [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:161]
+INFO: [Synth 8-6155] done synthesizing module 'PS7' (22#1) [/home/maja/Digital/Vivado/2020.1/scripts/rt/data/unisim_comp.v:62027]
+INFO: [Synth 8-6155] done synthesizing module 'processing_system7_v5_5_processing_system7' (23#1) [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:161]
 WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:323]
 WARNING: [Synth 8-7071] port 'M_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:323]
 WARNING: [Synth 8-7071] port 'S_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:323]
@@ -213,53 +223,105 @@ WARNING: [Synth 8-7071] port 'DMA1_RSTN' of module 'processing_system7_v5_5_proc
 WARNING: [Synth 8-7071] port 'DMA2_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:323]
 WARNING: [Synth 8-7071] port 'DMA3_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:323]
 WARNING: [Synth 8-7023] instance 'inst' of module 'processing_system7_v5_5_processing_system7' has 685 connections declared, but only 672 given [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:323]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (22#1) [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:60]
-WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:170]
-WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:170]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARVALID' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:170]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWVALID' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:170]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_BREADY' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:170]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_RREADY' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:170]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_WLAST' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:170]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_WVALID' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:170]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARID' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:170]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWID' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:170]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_WID' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:170]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARBURST' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:170]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARLOCK' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:170]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARSIZE' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:170]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWBURST' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:170]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWLOCK' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:170]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWSIZE' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:170]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARPROT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:170]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWPROT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:170]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARADDR' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:170]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWADDR' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:170]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_WDATA' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:170]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARCACHE' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:170]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARLEN' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:170]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARQOS' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:170]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWCACHE' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:170]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWLEN' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:170]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWQOS' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:170]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_WSTRB' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:170]
-WARNING: [Synth 8-7071] port 'FCLK_RESET0_N' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:170]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' has 65 connections declared, but only 35 given [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:170]
-INFO: [Synth 8-6155] done synthesizing module 'design_1' (23#1) [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (24#1) [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (24#1) [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:60]
+WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:188]
+WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:188]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARVALID' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:188]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWVALID' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:188]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_BREADY' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:188]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_RREADY' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:188]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_WLAST' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:188]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_WVALID' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:188]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARID' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:188]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWID' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:188]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_WID' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:188]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARBURST' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:188]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARLOCK' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:188]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARSIZE' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:188]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWBURST' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:188]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWLOCK' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:188]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWSIZE' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:188]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARPROT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:188]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWPROT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:188]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARADDR' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:188]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWADDR' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:188]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_WDATA' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:188]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARCACHE' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:188]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARLEN' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:188]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARQOS' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:188]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWCACHE' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:188]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWLEN' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:188]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWQOS' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:188]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_WSTRB' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:188]
+WARNING: [Synth 8-7071] port 'FCLK_RESET0_N' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:188]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' has 65 connections declared, but only 35 given [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:188]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlconcat_0_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_3_xlconcat' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ipshared/442e/hdl/xlconcat_v2_1_vl_rfs.v:14]
+	Parameter IN0_WIDTH bound to: 1 - type: integer 
+	Parameter IN1_WIDTH bound to: 1 - type: integer 
+	Parameter IN2_WIDTH bound to: 1 - type: integer 
+	Parameter IN3_WIDTH bound to: 1 - type: integer 
+	Parameter IN4_WIDTH bound to: 1 - type: integer 
+	Parameter IN5_WIDTH bound to: 1 - type: integer 
+	Parameter IN6_WIDTH bound to: 1 - type: integer 
+	Parameter IN7_WIDTH bound to: 1 - type: integer 
+	Parameter IN8_WIDTH bound to: 1 - type: integer 
+	Parameter IN9_WIDTH bound to: 1 - type: integer 
+	Parameter IN10_WIDTH bound to: 1 - type: integer 
+	Parameter IN11_WIDTH bound to: 1 - type: integer 
+	Parameter IN12_WIDTH bound to: 1 - type: integer 
+	Parameter IN13_WIDTH bound to: 1 - type: integer 
+	Parameter IN14_WIDTH bound to: 1 - type: integer 
+	Parameter IN15_WIDTH bound to: 1 - type: integer 
+	Parameter IN16_WIDTH bound to: 1 - type: integer 
+	Parameter IN17_WIDTH bound to: 1 - type: integer 
+	Parameter IN18_WIDTH bound to: 1 - type: integer 
+	Parameter IN19_WIDTH bound to: 1 - type: integer 
+	Parameter IN20_WIDTH bound to: 1 - type: integer 
+	Parameter IN21_WIDTH bound to: 1 - type: integer 
+	Parameter IN22_WIDTH bound to: 1 - type: integer 
+	Parameter IN23_WIDTH bound to: 1 - type: integer 
+	Parameter IN24_WIDTH bound to: 1 - type: integer 
+	Parameter IN25_WIDTH bound to: 1 - type: integer 
+	Parameter IN26_WIDTH bound to: 1 - type: integer 
+	Parameter IN27_WIDTH bound to: 1 - type: integer 
+	Parameter IN28_WIDTH bound to: 1 - type: integer 
+	Parameter IN29_WIDTH bound to: 1 - type: integer 
+	Parameter IN30_WIDTH bound to: 1 - type: integer 
+	Parameter IN31_WIDTH bound to: 1 - type: integer 
+	Parameter dout_width bound to: 2 - type: integer 
+	Parameter NUM_PORTS bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_3_xlconcat' (25#1) [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ipshared/442e/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconcat_0_0' (26#1) [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_0_1' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_1/synth/design_1_xlslice_0_1.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 4 - type: integer 
+	Parameter DIN_FROM bound to: 1 - type: integer 
+	Parameter DIN_TO bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (27#1) [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_0_1' (28#1) [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_1/synth/design_1_xlslice_0_1.v:57]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_1_0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_xlslice_1_0/synth/design_1_xlslice_1_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 4 - type: integer 
+	Parameter DIN_FROM bound to: 0 - type: integer 
+	Parameter DIN_TO bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' (28#1) [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_1_0' (29#1) [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/ip/design_1_xlslice_1_0/synth/design_1_xlslice_1_0.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (30#1) [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (31#1) [/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2247.551 ; gain = 0.000 ; free physical = 18522 ; free virtual = 53458
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2279.574 ; gain = 0.000 ; free physical = 1341 ; free virtual = 50609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2247.551 ; gain = 0.000 ; free physical = 18522 ; free virtual = 53458
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2279.574 ; gain = 0.000 ; free physical = 1340 ; free virtual = 50608
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2247.551 ; gain = 0.000 ; free physical = 18522 ; free virtual = 53458
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2279.574 ; gain = 0.000 ; free physical = 1340 ; free virtual = 50608
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2247.551 ; gain = 0.000 ; free physical = 18513 ; free virtual = 53450
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2279.574 ; gain = 0.000 ; free physical = 1331 ; free virtual = 50599
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -287,26 +349,26 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2302.020 ; gain = 0.000 ; free physical = 18429 ; free virtual = 53365
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2310.992 ; gain = 0.000 ; free physical = 1243 ; free virtual = 50507
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2302.020 ; gain = 0.000 ; free physical = 18429 ; free virtual = 53365
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2310.992 ; gain = 0.000 ; free physical = 1243 ; free virtual = 50507
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2302.020 ; gain = 54.469 ; free physical = 18499 ; free virtual = 53436
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2310.992 ; gain = 31.418 ; free physical = 1317 ; free virtual = 50581
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2302.020 ; gain = 54.469 ; free physical = 18499 ; free virtual = 53436
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2310.992 ; gain = 31.418 ; free physical = 1317 ; free virtual = 50581
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for design_1_i/clk_wiz_0/inst. (constraint file  /home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.runs/synth_1/dont_touch.xdc, line 34).
-Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0/inst. (constraint file  /home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.runs/synth_1/dont_touch.xdc, line 42).
+Applied set_property DONT_TOUCH = true for design_1_i/clk_wiz_0/inst. (constraint file  /home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.runs/synth_1/dont_touch.xdc, line 46).
+Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0/inst. (constraint file  /home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.runs/synth_1/dont_touch.xdc, line 54).
 Applied set_property DONT_TOUCH = true for design_1_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/led_walk_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/mul_cheat_detect_0. (constraint file  auto generated constraint, line ).
@@ -316,11 +378,15 @@ Applied set_property DONT_TOUCH = true for design_1_i/clk_wiz_0. (constraint fil
 Applied set_property DONT_TOUCH = true for design_1_i/SERIAL_TX_FIFO_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/SERIAL_CLOCK_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/debouncer_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/xlconcat_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/xlslice_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/xlslice_1. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2302.020 ; gain = 54.469 ; free physical = 18499 ; free virtual = 53436
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2310.992 ; gain = 31.418 ; free physical = 1313 ; free virtual = 50577
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2302.020 ; gain = 54.469 ; free physical = 18493 ; free virtual = 53431
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2310.992 ; gain = 31.418 ; free physical = 1305 ; free virtual = 50571
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -329,17 +395,20 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input    5 Bit       Adders := 2     
 	   2 Input    4 Bit       Adders := 3     
-	   2 Input    3 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 3     
 +---Registers : 
+	               32 Bit    Registers := 1     
 	                8 Bit    Registers := 1     
 	                5 Bit    Registers := 3     
-	                4 Bit    Registers := 8     
-	                3 Bit    Registers := 2     
+	                4 Bit    Registers := 10    
+	                3 Bit    Registers := 3     
 	                2 Bit    Registers := 2     
 	                1 Bit    Registers := 9     
 +---RAMs : 
 	              256 Bit	(32 X 8 bit)          RAMs := 1     
 +---Muxes : 
+	   2 Input   32 Bit        Muxes := 1     
+	   4 Input   32 Bit        Muxes := 1     
 	   2 Input    8 Bit        Muxes := 1     
 	   2 Input    5 Bit        Muxes := 1     
 	   6 Input    5 Bit        Muxes := 1     
@@ -348,11 +417,12 @@ Detailed RTL Component Info :
 	   4 Input    4 Bit        Muxes := 3     
 	   5 Input    4 Bit        Muxes := 1     
 	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 4     
 	   2 Input    2 Bit        Muxes := 4     
 	   4 Input    2 Bit        Muxes := 2     
-	   2 Input    1 Bit        Muxes := 14    
+	   2 Input    1 Bit        Muxes := 16    
 	   6 Input    1 Bit        Muxes := 4     
-	   4 Input    1 Bit        Muxes := 5     
+	   4 Input    1 Bit        Muxes := 6     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -369,7 +439,7 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2302.020 ; gain = 54.469 ; free physical = 18479 ; free virtual = 53419
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2310.992 ; gain = 31.418 ; free physical = 1293 ; free virtual = 50562
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -390,13 +460,13 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2435.004 ; gain = 187.453 ; free physical = 18206 ; free virtual = 53147
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2433.977 ; gain = 154.402 ; free physical = 1017 ; free virtual = 50286
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2454.012 ; gain = 206.461 ; free physical = 18190 ; free virtual = 53131
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2453.984 ; gain = 174.410 ; free physical = 1001 ; free virtual = 50270
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -416,7 +486,7 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2470.027 ; gain = 222.477 ; free physical = 18192 ; free virtual = 53132
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 2478.008 ; gain = 198.434 ; free physical = 1004 ; free virtual = 50274
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -434,37 +504,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2472.996 ; gain = 225.445 ; free physical = 18191 ; free virtual = 53132
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2478.008 ; gain = 198.434 ; free physical = 1004 ; free virtual = 50273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2472.996 ; gain = 225.445 ; free physical = 18191 ; free virtual = 53132
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2478.008 ; gain = 198.434 ; free physical = 1004 ; free virtual = 50273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2472.996 ; gain = 225.445 ; free physical = 18191 ; free virtual = 53132
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2478.008 ; gain = 198.434 ; free physical = 1004 ; free virtual = 50273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2472.996 ; gain = 225.445 ; free physical = 18191 ; free virtual = 53132
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2478.008 ; gain = 198.434 ; free physical = 1004 ; free virtual = 50273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2472.996 ; gain = 225.445 ; free physical = 18191 ; free virtual = 53132
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2478.008 ; gain = 198.434 ; free physical = 1004 ; free virtual = 50273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2472.996 ; gain = 225.445 ; free physical = 18191 ; free virtual = 53132
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2478.008 ; gain = 198.434 ; free physical = 1004 ; free virtual = 50273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -482,44 +552,48 @@ Report Cell Usage:
 +------+----------+------+
 |1     |BIBUF     |   130|
 |2     |BUFG      |     3|
-|3     |CARRY4    |    17|
-|4     |LUT1      |   127|
-|5     |LUT2      |    45|
-|6     |LUT3      |     7|
-|7     |LUT4      |    27|
-|8     |LUT5      |     4|
-|9     |LUT6      |     9|
+|3     |CARRY4    |    22|
+|4     |LUT1      |   128|
+|5     |LUT2      |    30|
+|6     |LUT3      |    16|
+|7     |LUT4      |    43|
+|8     |LUT5      |     7|
+|9     |LUT6      |    21|
 |10    |PLLE2_ADV |     1|
 |11    |PS7       |     1|
 |12    |RAM32M    |     2|
-|13    |FDRE      |   114|
-|14    |FDSE      |     1|
-|15    |IBUF      |     6|
-|16    |OBUF      |     9|
+|13    |FDCE      |     2|
+|14    |FDPE      |     3|
+|15    |FDRE      |   148|
+|16    |FDSE      |     1|
+|17    |LDC       |     2|
+|18    |IBUF      |     8|
+|19    |OBUF      |     9|
 +------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2472.996 ; gain = 225.445 ; free physical = 18191 ; free virtual = 53132
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2478.008 ; gain = 198.434 ; free physical = 1004 ; free virtual = 50273
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 2472.996 ; gain = 170.977 ; free physical = 18247 ; free virtual = 53188
-Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2473.004 ; gain = 225.445 ; free physical = 18247 ; free virtual = 53188
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2478.008 ; gain = 167.016 ; free physical = 1060 ; free virtual = 50329
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2478.016 ; gain = 198.434 ; free physical = 1060 ; free virtual = 50329
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2473.004 ; gain = 0.000 ; free physical = 18317 ; free virtual = 53258
-INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2478.016 ; gain = 0.000 ; free physical = 1139 ; free virtual = 50408
+INFO: [Netlist 29-17] Analyzing 27 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2515.918 ; gain = 0.000 ; free physical = 18260 ; free virtual = 53201
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2515.961 ; gain = 0.000 ; free physical = 1078 ; free virtual = 50347
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
+  A total of 4 instances were transformed.
+  LDC => LDCE: 2 instances
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-100 Infos, 55 Warnings, 0 Critical Warnings and 0 Errors encountered.
+121 Infos, 57 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2515.918 ; gain = 268.367 ; free physical = 18543 ; free virtual = 53484
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2515.961 ; gain = 236.387 ; free physical = 1360 ; free virtual = 50629
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/maja/Digital/projs/VivadoProjs/LED_WALKING/LED_WALKING.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Sep 24 11:23:08 2023...
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 25 12:18:17 2023...

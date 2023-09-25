@@ -28,3 +28,8 @@ set_property PACKAGE_PIN Y16 [get_ports button3]
 
 set_property IOSTANDARD LVCMOS33 [get_ports LCD]
 set_property PACKAGE_PIN V7 [get_ports LCD]
+
+set_property IOSTANDARD LVCMOS33 [get_ports faster]
+set_property IOSTANDARD LVCMOS33 [get_ports slower]
+set_property PACKAGE_PIN G15 [get_ports faster]
+set_property PACKAGE_PIN P15 [get_ports slower]

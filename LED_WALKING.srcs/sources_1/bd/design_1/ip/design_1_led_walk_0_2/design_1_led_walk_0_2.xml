@@ -6,7 +6,7 @@
   <spirit:version>1.0</spirit:version>
   <spirit:busInterfaces>
     <spirit:busInterface>
-      <spirit:name>clk</spirit:name>
+      <spirit:name>CLK</spirit:name>
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
       <spirit:slave/>
@@ -16,7 +16,7 @@
             <spirit:name>CLK</spirit:name>
           </spirit:logicalPort>
           <spirit:physicalPort>
-            <spirit:name>clk</spirit:name>
+            <spirit:name>CLK</spirit:name>
           </spirit:physicalPort>
         </spirit:portMap>
       </spirit:portMaps>
@@ -97,7 +97,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:d5de37f1</spirit:value>
+            <spirit:value>9:c067df10</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -108,7 +108,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:d5de37f1</spirit:value>
+            <spirit:value>9:c067df10</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -124,11 +124,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Sep 20 08:14:37 UTC 2023</spirit:value>
+            <spirit:value>Mon Sep 25 10:17:43 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:d5de37f1</spirit:value>
+            <spirit:value>9:c067df10</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -140,7 +140,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:0623b7b8</spirit:value>
+            <spirit:value>9:d4b813b4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -156,18 +156,44 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Sep 20 08:14:37 UTC 2023</spirit:value>
+            <spirit:value>Mon Sep 25 10:17:43 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:0623b7b8</spirit:value>
+            <spirit:value>9:d4b813b4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
     </spirit:views>
     <spirit:ports>
       <spirit:port>
-        <spirit:name>clk</spirit:name>
+        <spirit:name>CLK</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>slower</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>faster</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>

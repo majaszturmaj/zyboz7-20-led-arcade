@@ -297,3 +297,7 @@ set_property src_info {type:XDC file:3 line:27 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN Y16 [get_ports button3]
 set_property src_info {type:XDC file:3 line:30 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN V7 [get_ports LCD]
+set_property src_info {type:XDC file:3 line:34 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN G15 [get_ports faster]
+set_property src_info {type:XDC file:3 line:35 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN P15 [get_ports slower]

@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-//Date        : Sun Sep 24 11:22:35 2023
+//Date        : Mon Sep 25 12:17:43 2023
 //Host        : 15ach6 running 64-bit Ubuntu 22.04.3 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=8,numReposBlks=8,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=4,numPkgbdBlks=0,bdsource=USER,da_board_cnt=2,da_ps7_cnt=3,synth_mode=Global}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=12,numReposBlks=12,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=5,numPkgbdBlks=0,bdsource=USER,da_board_cnt=2,da_ps7_cnt=3,synth_mode=Global}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (DDR_addr,
     DDR_ba,
@@ -40,7 +40,9 @@ module design_1
     button1,
     button2,
     button3,
+    faster,
     led,
+    slower,
     sys_clock);
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
@@ -71,7 +73,9 @@ module design_1
   input button1;
   input button2;
   input button3;
+  input faster;
   output [3:0]led;
+  input slower;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN design_1_sys_clock, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.000" *) input sys_clock;
 
   wire Reset_1;
@@ -84,6 +88,8 @@ module design_1
   wire button2_0_1;
   wire button3_0_1;
   wire clk_wiz_0_clk_out_10MHz;
+  wire [3:0]debouncer_0_BUTTONS;
+  wire faster_1;
   wire [3:0]led_walk_0_led;
   wire [7:0]messenger_0_LCD_DATA;
   wire messenger_0_LCD_WR_EN;
@@ -113,7 +119,11 @@ module design_1
   wire processing_system7_0_FIXED_IO_PS_CLK;
   wire processing_system7_0_FIXED_IO_PS_PORB;
   wire processing_system7_0_FIXED_IO_PS_SRSTB;
+  wire slower_1;
   wire sys_clock_1;
+  wire [1:0]xlconcat_0_dout;
+  wire [0:0]xlslice_0_Dout;
+  wire [0:0]xlslice_1_Dout;
 
   assign LCD = SERIAL_TX_FIFO_0_TX;
   assign RGB_GREENS[1:0] = messenger_0_RGB_GREENS;
@@ -123,7 +133,9 @@ module design_1
   assign button1_0_1 = button1;
   assign button2_0_1 = button2;
   assign button3_0_1 = button3;
+  assign faster_1 = faster;
   assign led[3:0] = led_walk_0_led;
+  assign slower_1 = slower;
   assign sys_clock_1 = sys_clock;
   design_1_SERIAL_CLOCK_0_0 SERIAL_CLOCK_0
        (.CLK(processing_system7_0_FCLK_CLK0),
@@ -146,10 +158,16 @@ module design_1
   design_1_clk_wiz_0_0 clk_wiz_0
        (.clk_in1(sys_clock_1),
         .clk_out_10MHz(clk_wiz_0_clk_out_10MHz));
+  design_1_debouncer_0_0 debouncer_0
+       (.BUTTONS(debouncer_0_BUTTONS),
+        .PB({1'b0,1'b0,xlconcat_0_dout}),
+        .clk(clk_wiz_0_clk_out_10MHz));
   design_1_led_walk_0_2 led_walk_0
-       (.active(arcade_check_0_leds_active),
-        .clk(clk_wiz_0_clk_out_10MHz),
-        .led(led_walk_0_led));
+       (.CLK(clk_wiz_0_clk_out_10MHz),
+        .active(arcade_check_0_leds_active),
+        .faster(xlslice_0_Dout),
+        .led(led_walk_0_led),
+        .slower(xlslice_1_Dout));
   design_1_messenger_0_0 messenger_0
        (.LCD_DATA(messenger_0_LCD_DATA),
         .LCD_WR_EN(messenger_0_LCD_WR_EN),
@@ -203,4 +221,14 @@ module design_1
         .PS_PORB(FIXED_IO_ps_porb),
         .PS_SRSTB(FIXED_IO_ps_srstb),
         .USB0_VBUS_PWRFAULT(1'b0));
+  design_1_xlconcat_0_0 xlconcat_0
+       (.In0(slower_1),
+        .In1(faster_1),
+        .dout(xlconcat_0_dout));
+  design_1_xlslice_0_1 xlslice_0
+       (.Din(debouncer_0_BUTTONS),
+        .Dout(xlslice_0_Dout));
+  design_1_xlslice_1_0 xlslice_1
+       (.Din(debouncer_0_BUTTONS),
+        .Dout(xlslice_1_Dout));
 endmodule

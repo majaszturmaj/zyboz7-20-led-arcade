@@ -30,6 +30,18 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_SERIAL
 # IP: bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_processing_system7_0_0 || ORIG_REF_NAME==design_1_processing_system7_0_0} -quiet] -quiet
 
+# IP: bd/design_1/ip/design_1_debouncer_0_0/design_1_debouncer_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_debouncer_0_0 || ORIG_REF_NAME==design_1_debouncer_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_xlconcat_0_0/design_1_xlconcat_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_xlconcat_0_0 || ORIG_REF_NAME==design_1_xlconcat_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_xlslice_0_1/design_1_xlslice_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_xlslice_0_1 || ORIG_REF_NAME==design_1_xlslice_0_1} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_xlslice_1_0/design_1_xlslice_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_xlslice_1_0 || ORIG_REF_NAME==design_1_xlslice_1_0} -quiet] -quiet
+
 # XDC: bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_clk_wiz_0_0 || ORIG_REF_NAME==design_1_clk_wiz_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
 

@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# arcade_check, led_walk, messenger, mul_cheat_detect
+# arcade_check, debouncer, led_walk, messenger, mul_cheat_detect
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -177,7 +177,9 @@ proc create_root_design { parentCell } {
   set button1 [ create_bd_port -dir I button1 ]
   set button2 [ create_bd_port -dir I button2 ]
   set button3 [ create_bd_port -dir I button3 ]
+  set faster [ create_bd_port -dir I faster ]
   set led [ create_bd_port -dir O -from 3 -to 0 led ]
+  set slower [ create_bd_port -dir I slower ]
   set sys_clock [ create_bd_port -dir I -type clk -freq_hz 125000000 sys_clock ]
   set_property -dict [ list \
    CONFIG.PHASE {0.000} \
@@ -212,24 +214,29 @@ proc create_root_design { parentCell } {
    CONFIG.CLKOUT1_PHASE_ERROR {258.220} \
    CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {10.000} \
    CONFIG.CLKOUT2_DRIVES {BUFG} \
-   CONFIG.CLKOUT2_JITTER {288.707} \
-   CONFIG.CLKOUT2_PHASE_ERROR {258.220} \
-   CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {50.000} \
+   CONFIG.CLKOUT2_JITTER {317.841} \
+   CONFIG.CLKOUT2_PHASE_ERROR {249.865} \
+   CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {25.000} \
    CONFIG.CLKOUT2_USED {false} \
    CONFIG.CLKOUT3_DRIVES {BUFG} \
+   CONFIG.CLKOUT3_JITTER {237.312} \
+   CONFIG.CLKOUT3_PHASE_ERROR {249.865} \
+   CONFIG.CLKOUT3_USED {false} \
    CONFIG.CLKOUT4_DRIVES {BUFG} \
    CONFIG.CLKOUT5_DRIVES {BUFG} \
    CONFIG.CLKOUT6_DRIVES {BUFG} \
    CONFIG.CLKOUT7_DRIVES {BUFG} \
    CONFIG.CLK_IN1_BOARD_INTERFACE {sys_clock} \
    CONFIG.CLK_OUT1_PORT {clk_out_10MHz} \
-   CONFIG.CLK_OUT2_PORT {clk_out_50MHz} \
+   CONFIG.CLK_OUT2_PORT {clk_out_25MHz} \
+   CONFIG.CLK_OUT3_PORT {clk_out_100MHz} \
    CONFIG.FEEDBACK_SOURCE {FDBK_AUTO} \
    CONFIG.MMCM_BANDWIDTH {OPTIMIZED} \
    CONFIG.MMCM_CLKFBOUT_MULT_F {34} \
    CONFIG.MMCM_CLKIN2_PERIOD {10.0} \
    CONFIG.MMCM_CLKOUT0_DIVIDE_F {85} \
    CONFIG.MMCM_CLKOUT1_DIVIDE {1} \
+   CONFIG.MMCM_CLKOUT2_DIVIDE {1} \
    CONFIG.MMCM_COMPENSATION {ZHOLD} \
    CONFIG.MMCM_DIVCLK_DIVIDE {5} \
    CONFIG.NUM_OUT_CLKS {1} \
@@ -239,6 +246,17 @@ proc create_root_design { parentCell } {
    CONFIG.USE_RESET {false} \
  ] $clk_wiz_0
 
+  # Create instance: debouncer_0, and set properties
+  set block_name debouncer
+  set block_cell_name debouncer_0
+  if { [catch {set debouncer_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $debouncer_0 eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: led_walk_0, and set properties
   set block_name led_walk
   set block_cell_name led_walk_0
@@ -745,6 +763,23 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_USE_M_AXI_GP0 {1} \
  ] $processing_system7_0
 
+  # Create instance: xlconcat_0, and set properties
+  set xlconcat_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0 ]
+
+  # Create instance: xlslice_0, and set properties
+  set xlslice_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0 ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {1} \
+   CONFIG.DIN_TO {1} \
+   CONFIG.DIN_WIDTH {4} \
+ ] $xlslice_0
+
+  # Create instance: xlslice_1, and set properties
+  set xlslice_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_1 ]
+  set_property -dict [ list \
+   CONFIG.DIN_WIDTH {4} \
+ ] $xlslice_1
+
   # Create interface connections
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
@@ -759,7 +794,9 @@ proc create_root_design { parentCell } {
   connect_bd_net -net button1_0_1 [get_bd_ports button1] [get_bd_pins mul_cheat_detect_0/button1]
   connect_bd_net -net button2_0_1 [get_bd_ports button2] [get_bd_pins mul_cheat_detect_0/button2]
   connect_bd_net -net button3_0_1 [get_bd_ports button3] [get_bd_pins mul_cheat_detect_0/button3]
-  connect_bd_net -net clk_wiz_0_clk_out_10MHz [get_bd_pins SERIAL_TX_FIFO_0/CLK_WR] [get_bd_pins arcade_check_0/clk] [get_bd_pins clk_wiz_0/clk_out_10MHz] [get_bd_pins led_walk_0/clk] [get_bd_pins messenger_0/clk] [get_bd_pins mul_cheat_detect_0/clk]
+  connect_bd_net -net clk_wiz_0_clk_out_10MHz [get_bd_pins SERIAL_TX_FIFO_0/CLK_WR] [get_bd_pins arcade_check_0/clk] [get_bd_pins clk_wiz_0/clk_out_10MHz] [get_bd_pins debouncer_0/clk] [get_bd_pins led_walk_0/CLK] [get_bd_pins messenger_0/clk] [get_bd_pins mul_cheat_detect_0/clk]
+  connect_bd_net -net debouncer_0_BUTTONS [get_bd_pins debouncer_0/BUTTONS] [get_bd_pins xlslice_0/Din] [get_bd_pins xlslice_1/Din]
+  connect_bd_net -net faster_1 [get_bd_ports faster] [get_bd_pins xlconcat_0/In1]
   connect_bd_net -net led_walk_0_led [get_bd_ports led] [get_bd_pins arcade_check_0/led_position] [get_bd_pins led_walk_0/led]
   connect_bd_net -net messenger_0_LCD_DATA [get_bd_pins SERIAL_TX_FIFO_0/DATA] [get_bd_pins messenger_0/LCD_DATA]
   connect_bd_net -net messenger_0_LCD_WR_EN [get_bd_pins SERIAL_TX_FIFO_0/WR_EN] [get_bd_pins messenger_0/LCD_WR_EN]
@@ -768,7 +805,11 @@ proc create_root_design { parentCell } {
   connect_bd_net -net mul_cheat_detect_0_button_out [get_bd_pins arcade_check_0/button_in] [get_bd_pins mul_cheat_detect_0/button_out]
   connect_bd_net -net mul_cheat_detect_0_cheater [get_bd_pins arcade_check_0/cheater] [get_bd_pins mul_cheat_detect_0/cheater]
   connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins SERIAL_CLOCK_0/CLK] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK]
+  connect_bd_net -net slower_1 [get_bd_ports slower] [get_bd_pins xlconcat_0/In0]
   connect_bd_net -net sys_clock_1 [get_bd_ports sys_clock] [get_bd_pins clk_wiz_0/clk_in1]
+  connect_bd_net -net xlconcat_0_dout [get_bd_pins debouncer_0/PB] [get_bd_pins xlconcat_0/dout]
+  connect_bd_net -net xlslice_0_Dout [get_bd_pins led_walk_0/faster] [get_bd_pins xlslice_0/Dout]
+  connect_bd_net -net xlslice_1_Dout [get_bd_pins led_walk_0/slower] [get_bd_pins xlslice_1/Dout]
 
   # Create address segments
 
