@@ -13,7 +13,6 @@
       "clk_wiz_0": "",
       "SERIAL_TX_FIFO_0": "",
       "SERIAL_CLOCK_0": "",
-      "messenger_0": "",
       "processing_system7_0": "",
       "arcade_check_0": "",
       "mul_cheat_detect_0": "",
@@ -21,7 +20,8 @@
       "xlconcat_0": "",
       "xlslice_0": "",
       "xlslice_1": "",
-      "led_walk_0": ""
+      "led_walk_0": "",
+      "messenger_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -292,66 +292,6 @@
           },
           "N": {
             "value": "20"
-          }
-        }
-      },
-      "messenger_0": {
-        "vlnv": "xilinx.com:module_ref:messenger:1.0",
-        "xci_name": "design_1_messenger_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "messenger",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "RST",
-                "value_src": "constant"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
-              },
-              "FREQ_HZ": {
-                "value": "10000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "RST": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "result": {
-            "direction": "I",
-            "left": "2",
-            "right": "0"
-          },
-          "LCD_DATA": {
-            "direction": "O",
-            "left": "7",
-            "right": "0"
-          },
-          "LCD_WR_EN": {
-            "direction": "O"
-          },
-          "RGB_GREENS": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
-          },
-          "RGB_REDS": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
           }
         }
       },
@@ -1605,6 +1545,66 @@
             "right": "0"
           }
         }
+      },
+      "messenger_0": {
+        "vlnv": "xilinx.com:module_ref:messenger:1.0",
+        "xci_name": "design_1_messenger_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "messenger",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "RST",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "10000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "RST": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "result": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "LCD_DATA": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "LCD_WR_EN": {
+            "direction": "O"
+          },
+          "RGB_GREENS": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "RGB_REDS": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -1651,9 +1651,9 @@
         "ports": [
           "Reset",
           "SERIAL_TX_FIFO_0/RST",
-          "messenger_0/RST",
           "arcade_check_0/rst",
-          "mul_cheat_detect_0/rst"
+          "mul_cheat_detect_0/rst",
+          "messenger_0/RST"
         ]
       },
       "mul_cheat_detect_0_cheater": {
@@ -1696,11 +1696,11 @@
         "ports": [
           "clk_wiz_0/clk_out_10MHz",
           "SERIAL_TX_FIFO_0/CLK_WR",
-          "messenger_0/clk",
           "arcade_check_0/clk",
           "mul_cheat_detect_0/clk",
           "debouncer_0/clk",
-          "led_walk_0/CLK"
+          "led_walk_0/CLK",
+          "messenger_0/clk"
         ]
       },
       "SERIAL_CLOCK_0_CLK_TX": {

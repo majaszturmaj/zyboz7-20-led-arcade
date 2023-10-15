@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.765741",
-   "Default View_TopLeft":"427,-8",
+   "Default View_ScaleFactor":"0.625",
+   "Default View_TopLeft":"182,-64",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:9.0 TLS
 #  -string -flagsOSRD
@@ -22,7 +22,6 @@ preplace portBus RGB_GREENS -pg 1 -lvl 5 -x 1370 -y 470 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 140 -y 230 -defaultsOSRD
 preplace inst SERIAL_TX_FIFO_0 -pg 1 -lvl 4 -x 1190 -y 710 -defaultsOSRD
 preplace inst SERIAL_CLOCK_0 -pg 1 -lvl 3 -x 870 -y 660 -defaultsOSRD
-preplace inst messenger_0 -pg 1 -lvl 4 -x 1190 -y 460 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 2 -x 510 -y 110 -defaultsOSRD
 preplace inst arcade_check_0 -pg 1 -lvl 2 -x 510 -y 490 -defaultsOSRD
 preplace inst mul_cheat_detect_0 -pg 1 -lvl 1 -x 140 -y 520 -defaultsOSRD
@@ -31,6 +30,7 @@ preplace inst xlconcat_0 -pg 1 -lvl 1 -x 140 -y 340 -defaultsOSRD
 preplace inst xlslice_0 -pg 1 -lvl 3 -x 870 -y 450 -defaultsOSRD
 preplace inst xlslice_1 -pg 1 -lvl 3 -x 870 -y 350 -defaultsOSRD
 preplace inst led_walk_0 -pg 1 -lvl 3 -x 870 -y 180 -defaultsOSRD
+preplace inst messenger_0 -pg 1 -lvl 4 -x 1190 -y 460 -defaultsOSRD
 preplace netloc led_walk_0_led 1 1 4 300 260 740 270 980 170 N
 preplace netloc button0_0_1 1 0 1 NJ 510
 preplace netloc button1_0_1 1 0 1 NJ 530

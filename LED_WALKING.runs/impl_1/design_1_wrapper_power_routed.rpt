@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-| Date             : Mon Sep 25 12:18:57 2023
+| Date             : Tue Sep 26 11:44:55 2023
 | Host             : 15ach6 running 64-bit Ubuntu 22.04.3 LTS
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -53,10 +53,10 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |    <0.001 |        6 |       --- |             --- |
-| Slice Logic              |    <0.001 |      480 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |       91 |     53200 |            0.17 |
-|   CARRY4                 |    <0.001 |       22 |     13300 |            0.17 |
+| Slice Logic              |    <0.001 |      483 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |       95 |     53200 |            0.18 |
 |   Register               |    <0.001 |      156 |    106400 |            0.15 |
+|   CARRY4                 |    <0.001 |       22 |     13300 |            0.17 |
 |   Others                 |     0.000 |      155 |       --- |             --- |
 |   LUT as Distributed RAM |     0.000 |        8 |     17400 |            0.05 |
 | Signals                  |    <0.001 |      231 |       --- |             --- |
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.024 |       0.010 |      0.015 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.025 |       0.010 |      0.015 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.065 |       0.050 |      0.015 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |

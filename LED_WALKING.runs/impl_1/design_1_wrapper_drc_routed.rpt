@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-| Date         : Mon Sep 25 12:18:56 2023
+| Date         : Tue Sep 26 11:44:54 2023
 | Host         : 15ach6 running 64-bit Ubuntu 22.04.3 LTS
 | Command      : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
 | Design       : design_1_wrapper
@@ -35,7 +35,7 @@ Table of Contents
 -----------------
 PDRC-153#1 Warning
 Gated clock check  
-Net design_1_i/led_walk_0/inst/level_reg[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin design_1_i/led_walk_0/inst/level_reg[0]_LDC_i_1/O, cell design_1_i/led_walk_0/inst/level_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net design_1_i/led_walk_0/inst/level2_n_0 is a gated clock net sourced by a combinational pin design_1_i/led_walk_0/inst/level2/O, cell design_1_i/led_walk_0/inst/level2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#2 Warning

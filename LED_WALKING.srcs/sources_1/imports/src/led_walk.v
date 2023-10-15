@@ -27,10 +27,10 @@ end
 
 always @(posedge slower or posedge faster) begin
     
-    if (faster && (level < 3))
+    if (faster && (level<3))
     level = level + 1;
     
-    else if (slower && (level > 0))
+    else if (slower && (level>0))
     level = level - 1;     
     
     
